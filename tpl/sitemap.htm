@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>网站地图_{#$page_title#}</title>
+<meta name="author" content="li kunlin" />
+<meta name="Keywords" content="{#$keywords#}" />
+<meta name="Description" content="{#$description#}" />
+<style type="text/css">
+.content{font-size: 13px;}
+	.content .item{float: left; color:#333;}
+	.content .item h3 a{color:#555; font-weight: bold;text-decoration: none;}
+	.content .item li{padding: 2px 0;}
+	.content .item li a{color:#555;}
+</style>
+</head>
+<body>
+	<div class="content">
+		网站地图：
+		<ul>
+			<li class="item">
+				<h3><a href="{#$domain|cat:$list_news[0].catalog#}/page_1.html" target="_blank">{#$list_news[0].name#}</a></h3>
+				<ol>
+					{# section loop=$list_news name=row #}{#*列表遍历*#}
+						<li><a href="{# $domain|cat:$list_news[row].catalog#}/{#$list_news[row].id #}.html" target="_blank" >{# $list_news[row].title #}</a></li>
+					{# /section #}
+				</ol>
+			</li>
+			<li class="item">
+				<h3><a href="{#$domain|cat:$list_case[0].catalog#}/page_1.html" target="_blank">{#$list_case[0].name#}</a></h3>
+				<ol>
+					{# section loop=$list_case name=row #}{#*列表遍历*#}
+						<li><a href="{# $domain|cat:$list_case[row].catalog#}/{#$list_case[row].id #}.html" target="_blank" >{# $list_case[row].title #}</a></li>
+					{# /section #}
+				</ol>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

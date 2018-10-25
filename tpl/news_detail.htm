@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="author" content="li kunlin" />
+    <meta name="Keywords" content="{#$keywords#}" />
+    <meta name="Description" content="{#$description#}" />
+    <title>{#$page_title#}</title>
+    <link rel="icon" href="" type="image/x-ico">
+    <link rel="stylesheet" href="{#$domain#}css/a.css" />
+    <link href="{#$domain#}css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{#$domain#}css/animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+    <script type="text/javascript" src="{#$domain#}js/wow.min.js" ></script>
+    <script src="{#$domain#}js/jquery.min.js"></script>
+    <script src="{#$domain#}js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <!--====================导航====================-->
+      {# include file="headsub.htm"#}
+    <img src="{#$domain#}img/banner/banner_02.png" class="img-responsive"/>   
+    </header>
+    
+    <section>
+      <div class="container">
+        <div class="site"><span class="glyphicon glyphicon-home"></span> <a href="{#$domain#}">官网首页 </a> > {#$column#} </div>
+        
+        <div class="news-wrap">
+          <h3>{#$title#}</h3>
+          <ul class="news-data">
+            <li>时间：{#$date#}</li>
+            <li>浏览：{#$views#}</li>
+          </ul>
+          <div class="content-img">
+            {#$context#}
+          </div>
+          <div class="bdsharebuttonbox">
+            <a href="#" class="bds_more" data-cmd="more"></a>
+            <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+            <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+            <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+            <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+            <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+          </div>
+          <ul class="news-f">
+            <li>上一篇：<a href="{#$last_href#}">{#$last_title#}</a></li>
+            <li>下一篇：<a href="{#$next_href#}">{#$next_title#}</a></li>
+          </ul>
+        </div>
+      
+      </div>
+    </section>
+     {# include file="footsub.htm"#}
+  </body>
+  <script type="text/javascript" src="{#$domain#}js/a.js" ></script>
+  <script>
+      new WOW().init();
+      $('#nav ul li a').eq( {#$index#} ).addClass('on');
+//=====百度分享=====
+window._bd_share_config={
+	"common":{
+		"bdSnsKey":{},
+		"bdText":"{#$title#}",
+		"bdUrl":"{#$this_href#}",
+		"bdMini":"2",
+		"bdMiniList":false,
+		"bdPic":"",
+		"bdStyle":"1",
+		"bdSize":"16"
+		},
+		"share":{},
+//图片分享
+//		"image":{
+//			"viewList":["weixin","tsina","sqq","qzone","tqq","renren"],
+//			"viewText":"分享到：","viewSize":"16"},
+		"selectShare":{
+				"bdContainerClass":null,
+				"bdSelectMiniList":["weixin","tsina","sqq","qzone","tqq","renren"]
+				}
+			};
+with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+  </script>
+
+</html>

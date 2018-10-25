@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="author" content="li kunlin" />
+    <meta name="Keywords" content="{#$keywords#}" />
+    <meta name="Description" content="{#$description#}" />
+    <title>{#$column#}_{#$page_title#}</title>
+    <link rel="icon" href="" type="image/x-ico">
+    <link rel="stylesheet" href="{#$domain#}css/a.css" />
+    <link href="{#$domain#}css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{#$domain#}css/animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+    <script type="text/javascript" src="{#$domain#}js/wow.min.js" ></script>
+    <script src="{#$domain#}js/jquery.min.js"></script>
+    <script src="{#$domain#}js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <!--====================导航====================-->
+      {# include file="headsub.htm"#}
+    <img src="{#$domain#}img/banner/banner_02.png" class="img-responsive" />    
+    </header>
+    
+    <section>
+      <div class="container">
+        <div class="site"><span class="glyphicon glyphicon-home"></span> <a href="{#$domain#}">官网首页 </a>> {#$column#}</div>
+      
+        <div class="news01">
+            {# section loop=$list name=row#}
+            <div class="new01-content row wow slideInUp" data-wow-duration="1s" data-wow-delay="0s">
+              <div class="col-xs-9 col-sm-9 col-md-10">
+                <p><a href="{#$domain|cat:$list[row].catalog#}/{#$list[row].id#}.html" target="_blank">{#$list[row].title#}</a></p>
+                <div>
+                  {# $list[row].context|replace:"&nbsp;":""|strip_tags|truncate:150:"...":true #} 
+                </div>
+              </div>
+              <div class="new01-time col-xs-3 col-sm-3 col-md-2">
+                <div>{# $list[row].date|mb_substr:8:10:'GBK'#}</div>
+                <div>{# $list[row].date|truncate:7:"":true#}</div>
+              </div>          
+            </div>
+            <hr />
+            {# /section#}
+        </div>      
+        <!--上下页  -->
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="page">
+              {# if $this_page > 1 #}<a href="{# $domain|cat:$list[0].catalog #}/page_1.html" title="首页"><span>&lt;&lt;</span></a>{# /if #}
+              {# if $this_page > 1 #}<a href="{# $domain|cat:$list[0].catalog #}/page_{# $this_page-1#}.html" title="上一页"><span>&lt;</span></a>{# /if #}
+              {# section loop=$page_array name=row #}{#*页码遍历*#}
+              {# if $this_page == $page_array[row] #}
+              <a class="page-active" href="{# $domain|cat:$list[0].catalog#}/page_{#$page_array[row]#}.html"><span>{#$page_array[row]#}</span></a>
+              {#else#}
+              <a href="{# $domain|cat:$list[0].catalog#}/page_{#$page_array[row]#}.html"><span>{#$page_array[row]#}</span></a>
+              {#/if#}
+              {# /section #}
+              {# if $this_page != $page_sum #}<a href="{# $domain|cat:$list[0].catalog#}/page_{# $this_page+1#}.html" title="下一页"><span>&gt;</span></a>{# /if #}
+              {# if $this_page != $page_sum #}<a href="{# $domain|cat:$list[0].catalog#}/page_{# $page_sum#}.html" title="尾页"><span>&gt;&gt;</span></a>{# /if #}
+            </div>
+          </div>   
+        </div>
+      </div>
+    </section>
+    {# include file="footsub.htm"#}
+  </body>
+  <script type="text/javascript" src="{#$domain#}js/a.js" ></script>
+  <script>
+    new WOW().init();
+    //导航栏样式选中
+    $(function() {
+      $('#nav ul ul li a').eq( {#$index#} ).addClass("on");
+    });
+  </script>
+</html>

@@ -1,0 +1,279 @@
+.breadcrumb{
+  padding: 0;
+}
+.breadcrumb > li + li:before {
+    color: #CCCCCC;
+    content: "> ";
+    padding: 0 5px;
+}
+.nav > li > a:focus, .nav > li > a:hover{
+  background-color: #1f1f20;
+  color:#fff;
+}
+
+.nav-tabs > li > a{
+  transition: all 0.5s ease;
+  border-radius: 0;
+  margin-right: 0;
+  color:#666;
+  font-size: 16px;
+  line-height: 30px;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover{
+  background-color: #1f1f20;
+  color:#fff;
+  margin: 0;
+}
+.nav-tabs > li.active > a::after{
+  position: absolute;
+  content: "";
+  width: auto;
+  height: auto;
+  border-style: solid;
+  border-color: transparent transparent transparent #1f1f20;
+  border-width: 26px 22px;
+  right: -43px;
+  top: 0;
+}
+.nav-stacked > li + li{
+  margin-top: 0;
+}
+.nav-tabs{
+  border-bottom: transparent;
+  border-right:1px solid #e6e6e6;
+}
+.nav-tabs li{
+  text-align: center;
+  border-bottom:1px solid #e6e6e6;
+}
+/* 上面是bootstrap内部代码 修改*/
+
+/* 顶部返回 开始*/
+.main{
+  margin-bottom: 5em;
+  background-color: #fff;
+}
+.main .nav{
+  padding: 0;
+}
+.bcs{
+  text-align:right;
+  font-size: 1.6em;
+  margin-bottom: 2.5em;
+}
+/* 顶部返回 end*/
+
+.main-left-side{
+  border-radius:15px;
+  border:1px solid #000;
+  padding: 4em;
+}
+.product .main-left-side,.show .main-left-side{        /*让产品展示和门店展示的border消失以及去掉padding*/
+  border:0;
+  padding: 0;
+}
+.product .fudong,.show .fudong{
+  margin-top:0;
+  margin-left: 0;
+}
+.fudong{
+  margin-top: 4em;
+  margin-left: 10em;
+  margin-bottom: 2em;
+  overflow: hidden;
+  text-align: center;
+}
+.fudong img{
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor:pointer;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.fudong li a div{
+    background-color: #000;
+    overflow: hidden;
+}
+.fudong li:hover img{
+  opacity: 0.5;
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.fudong ul,.flex ul{
+  list-style: none;
+}
+.fudong ul li{
+  width: 31.33%;
+  margin: 1%;
+}
+.fudong ul li h4{
+  font-size: 16px;
+  padding: 5px 12px;
+  color: #fff;
+  margin-top: 10px;
+  background-color:#0cb6ae;;
+}
+/* pagination 部分代码*/
+.center{
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+.center span b{
+  color:red;
+}
+/* pagination 部分代码 end*/
+
+/* about关于部分代码 开始 */
+.about .ppt-font p{
+  text-indent:2em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 2;
+}
+.about .ppt-font img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* about关于部分代码 end*/
+
+/* all-link部分代码开始 */
+.all-link{
+  font-size: 16px;
+}
+.all-link .ppt-font{
+  border:0;
+  padding: 0;
+}
+.all-link .ppt-font h6{
+  font-size: 16px;
+  color:#000;
+  font-weight: 600;
+}
+.all-link .ppt-font h2{
+  font-size: 18px;
+  font-weight: 400;
+  color:#000;
+  text-align: center;
+  padding: 5px 12px;
+}
+.all-link .ppt-font div.others{
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+/* all-link部分代码 end*/
+/*contact联系我们 开始*/
+.contact-us .form-horizontal .control-label{
+  font-size: 14px;
+  color:#555;
+}
+.ppt-font{
+  border-radius: 15px;
+  border: 1px solid #000;
+  padding: 4em;
+}
+.ppt-font p{
+  text-indent:2em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 2;
+}
+.ppt-font > img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.contact-us{
+  /* text-align: center; */
+}
+.contact-us h2{
+  padding: 10px 0;
+  text-align: center;
+}
+.contact-us h2 span{
+  color:#c9302c;
+}
+.contact-us h5{
+  text-align: center;
+  margin-bottom: 5px;
+}
+.contact-us h5 span{
+  color:#c9302c;
+}
+.contact-us textarea{
+  resize:none;
+}
+.border-gray{
+  border:1px solid #ccc;
+}
+.border-gray ol li{
+  cursor:pointer;
+  margin-left: 20px;
+  font-size: 16px;
+  color:#999;
+}
+/*contact联系我们 end*/
+.flex{
+  margin-bottom: 2em;
+}
+.flex img{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius:5px;
+}
+
+.flex ul,.fudong ul{
+   display: inline-flex;
+   flex-direction:row;
+   flex-wrap:wrap;
+   justify-content:flex-start;
+    align-items:center;
+}
+.flex ul li{
+  display: inline-block;
+  width: 50%;
+  padding:0 10px;
+  text-align: center;
+}
+.flex ul li h4{
+  color:#fff;
+  position: relative;
+  top:-15px;
+  font-size: 12px;
+}
+.main-left-side-phone{
+  display: none;
+}
+@media (max-width:768px) {
+  .bcs{margin-bottom: 0.5em;}
+  .breadcrumb{margin-bottom: 0.5em;}
+  .main-left-side{display: none;}
+  .main-left-side-phone{display: block;}
+  .fudong img{
+    width: 40%;
+    height: auto;
+    background-size: cover;
+    background-repeat:no-repeat;
+  }
+  .ppt-font{border:0;padding: 0;}
+}
+.style-hr{/*渐变*/
+margin:0 auto;
+border: 0;
+height: 1px;
+background: #333;
+background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+@keyframes truning360 {
+  50% {transform:  rotateY(180deg);}
+  100%{transform:  rotateY(0deg);}
+}

@@ -1,0 +1,53 @@
+
+body {
+	background:#c8edff;	
+	padding: 0px;
+}
+#login_div{
+	background:#fffff0;
+	width:100%;
+	margin:120px 0px 60px 0px;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	 
+}
+#login_table{
+	margin-right: 170px;
+	margin-left: 0px;
+}
+#login_bar{
+	padding:0px 30px 0px 40px;
+	
+}
+#login_table td{
+	font: 13px "sans-serif", "Arial", "Verdana";
+	text-align: right;
+}
+input.button{
+	padding: 2px 25px 1px;
+	margin:2px 35px;
+  	border: 0px solid #fff;
+  	background: url(../images/button_bg.gif) repeat-x;
+}
+form {
+  	margin: 0px;
+  	padding: 0px;
+}
+
+input, textarea, select {
+  	font: 12px "courier new";
+}
+
+
+.clear {
+  clear: both;
+  float: none;
+  font-size: 0px;
+  margin: 0;
+  padding: 0;
+  display:block;
+}
+
+.nowrap {
+  white-space:nowrap;
+}

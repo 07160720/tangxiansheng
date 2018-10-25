@@ -1,0 +1,62 @@
+@CHARSET "UTF-8";
+body{
+	background: #FFFFFF; 
+	margin:0px;
+	height:100%;
+	font-size: 13px;
+	min-width: 1000px;
+}
+input[type="text"]{border:1px solid #ccc; border-top:1px solid gray;border-left:1px solid gray;padding:3px;color:#555;}
+input[type="button"]{border:1px solid #999; border-top:0px ;border-left:0px;padding:1px 3px 1px 3px; }
+input[type="submit"]{border:1px solid #999; border-top:0px ;border-left:0px;padding:2px 3px 2px 3px;}
+input[type="reset"]{border:1px solid #999; border-top:0px ;border-left:0px;padding:2px 3px 2px 3px;margin-left: 20px;}
+textarea{border:1px solid #ccc;border-top:1px solid gray;border-left:1px solid gray; color:#555;}
+a{text-decoration: none;color:#000;}
+a:HOVER{color:#008080;}
+select{border:1px solid #DCDCDC;border-top:1px solid gray;border-left:1px solid gray;padding:2px;}
+
+#tabbody-div {
+
+  	padding: 20px;
+  	background: #ffffff;
+	margin-top:45px;
+}
+
+#tabbody-div img {
+  	vertical-align: middle;
+}
+th.group-title {text-align: left;}
+#general-table{border-collapse:collapse;}
+#general-table tr{border:1px dotted #ccc;}
+#general-table td{padding:5px 5px;}
+#general-table td.label {
+	width: 80px;
+	font-size:13px;
+  	text-align: left;
+	border-right: 1px dotted #ccc;
+}
+
+input.capital {
+  	text-transform: uppercase;
+}
+
+span.require-field {
+  	margin-left: 1em;
+  	font: 12px verdana;
+  	color: #FF0000;
+}
+span.alert{
+	background:#FCC;
+	border:1px solid #F99;
+	padding:1px;
+	display:none;
+	font-size:14px;
+}
+span.link-span {
+  	color: #555;
+  	padding-left: 10px;
+  	margin-left: 15px;
+  	border-left: 2px solid #999;
+  	font-weight: normal;
+  	
+}

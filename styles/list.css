@@ -1,0 +1,59 @@
+@CHARSET "UTF-8";
+body{
+	background: #F4FAFB;
+	margin:0;
+	padding:0;
+	height:100%;
+	font-size: 13px;
+	min-width: 1000px;
+}
+input[type="button"]{border:1px solid #999; border-top:0px ;border-left:0px;padding:1px 3px 1px 3px;}
+
+input[type="submit"]{border:1px solid #999; border-top:0px ;border-left:0px;padding:2px 3px 2px 3px;}
+
+a{text-decoration: none;color:#000;}
+a:HOVER{color:#008080;}
+
+#list-form{
+	
+	padding:10px 30px 0px 30px;
+	margin-top:39px;
+}
+#list-div {
+  	width: 100%;
+  	
+	margin: 10px 0px 10px 0px;
+}
+
+#list-div table {
+  	width: 100%;
+	background: #DCDCDC;
+}
+#list-div tr{
+  	background: #FFF;
+}
+
+#list-div tr:hover,tr.hover{
+  	background: #BBDDE5 ;
+  	
+}
+#list-div th {
+  	line-height: 24px;
+  	background: #BBDDE5;
+  	white-space: nowrap;
+	font-weight: normal;
+	
+}
+th span{font-family: "微软雅黑";}
+
+#list-div td {	
+  	line-height: 30px;
+}
+
+#list-div span{
+	padding: 0px 0px 0px 5px;
+}
+#list-div td span{
+	
+}
+

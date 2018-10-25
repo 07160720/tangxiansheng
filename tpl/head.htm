@@ -1,0 +1,31 @@
+   <nav class="navbar navbar-default wow slideInDown" role="navigation" id="nav1" data-wow-duration="1s">
+    <div class="container">
+      <div class="logo"><a href="{#$domain#}"><img src="{#$domain#}img/logo.png" alt="汤先生" class="img-responsive center-block"/></a></div>
+      <div class="navbar-header">
+        <div class="navbar-brand"><a href="{#$domain#}"><img src="{#$domain#}img/logo.png" alt="汤先生"/></a></div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>  
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul>
+          <ul id="li-left">
+            {# section loop=$column_left name=row#}
+            <li>
+              <a href="{#$domain|cat:$column_left[row].link#}">{#$column_left[row].name#}</a>
+            </li>
+            {# /section#}
+          </ul>
+          <ul id="li-right">
+            {# section loop=$column_right name=row#}
+            <li>
+              <a href="{#$domain|cat:$column_right[row].link#}">{#$column_right[row].name#}</a>
+            </li>
+            {# /section#}
+          </ul>
+        </ul>
+      </div>
+    </div>
+  </nav>

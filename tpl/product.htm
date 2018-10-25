@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="author" content="li kunlin" />
+    <meta name="Keywords" content="{#$keywords#}" />
+    <meta name="Description" content="{#$description#}" />
+    <title>{#$column#}_{#$page_title#}</title>
+    <link rel="icon" href="" type="image/x-ico">
+    <link rel="stylesheet" href="{#$domain#}css/a.css" />
+    <link href="{#$domain#}css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{#$domain#}css/animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+    <script type="text/javascript" src="{#$domain#}js/wow.min.js" ></script>
+    <script src="{#$domain#}js/jquery.min.js"></script>
+    <script src="{#$domain#}js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <!--====================导航====================-->
+      {# include file="headsub.htm"#}
+    <img src="{#$domain#}img/banner/banner_01.png" class="img-responsive" />    
+    </header>
+    
+    <section>
+      <div class="container products">
+        <div class="site"><span class="glyphicon glyphicon-home"></span> <a href="{#$domain#}">官网首页 </a> > {#$column#}</div>      
+        <div class="products-home row">
+          <div class="col-xs-12 col-sm-3 col-md-3 products-p wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
+            <div>堂食系列汤品</div>
+            <hr />
+            <ul>
+              <li id="pro01">养生汤</li>
+              <li id="pro02">甜汤</li>
+              <li id="pro03">汤点</li>
+              <li id="pro04">配菜</li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-9 col-md-9 products-content01">
+            <div class="row">
+              {# section loop=$list_p1 name=row#}
+              <div class="col-xs-6 col-sm-4 col-md-4">
+                <figure><img src="{#$domain#}img/product/{#$list_p1[row].img_url#}" class="img-responsive center-block"/></figure>
+                <figcaption>
+                  <p>大大鸡腿汤</p>
+                  <div>加油打Call、鲜香爽滑</div>
+                </figcaption>
+              </div>
+              {# /section#}
+            </div>
+          </div>
+          
+          <div class="col-xs-12 col-sm-9 col-md-9 products-content02">
+            <div class="row">
+              {# section loop=$list_p2 name=row#}
+              <div class="col-xs-6 col-sm-4 col-md-4">
+                <figure><img src="{#$domain#}img/product/{#$list_p2[row].img_url#}" class="img-responsive center-block"/></figure>
+                <figcaption>
+                  <p>椰香碧根果白美人</p>
+                </figcaption>
+              </div>
+              {# /section#}
+            </div>
+          </div>
+          
+          <div class="col-xs-12 col-sm-9 col-md-9 products-content03">
+            <div class="row">
+              {# section loop=$list_p3 name=row#}
+              <div class="col-xs-6 col-sm-4 col-md-4">
+                <figure><img src="{#$domain#}img/product/{#$list_p3[row].img_url#}" class="img-responsive center-block"/></figure>
+                <figcaption>
+                  <p>玫瑰树莓小挞</p>
+                </figcaption>
+              </div>
+              {# /section#}
+            </div>
+          </div>
+          
+          <div class="col-xs-12 col-sm-9 col-md-9 products-content04">
+            <div class="row">
+              {# section loop=$list_p4 name=row#}
+              <div class="col-xs-6 col-sm-4 col-md-4">
+                <figure><img src="{# $domain#}img/product/{#$list_p4[row].img_url#}" class="img-responsive center-block"/></figure>
+                <figcaption>
+                  <p>烫时蔬</p>
+                </figcaption>
+              </div>
+              {# /section#}
+            </div>
+          </div>
+          </div>
+          
+          <div class="products-sell row">
+            <div class="col-xs-12 col-sm-3 col-md-3 products-p">
+              <div>零售系列汤品</div>
+              <hr />
+              <ul>
+                <li>八分钟自加热</li>
+              </ul>
+            </div>
+            
+            <div class="col-xs-12 col-sm-9 col-md-9 products-content05">
+              <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                  <figure><img src="{#$domain#}img/product1.png" class="img-responsive center-block"/></figure>
+                  <figcaption>
+                    <p>阿胶乌鸡汤</p>
+                    <div>营养滋补、喝出好气色</div>
+                  </figcaption>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                  <figure><img src="{#$domain#}img/product2.png" class="img-responsive center-block"/></figure>
+                  <figcaption>
+                    <p>阿胶乌鸡汤</p>
+                    <div>汤味香浓、喝出Q弹美肌</div>
+                  </figcaption>
+                </div>              
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+     {# include file="footsub.htm"#}
+  </body>
+  <script type="text/javascript" src="{#$domain#}js/a.js" ></script>
+  <script>
+      new WOW().init();
+      //导航栏样式选中
+      $(function() {
+         $('#nav ul ul li a').eq( {#$index#} ).addClass("on");
+      });
+  </script>
+</html>

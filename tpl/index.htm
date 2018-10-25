@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="author" content="li kunlin" />
+    <meta name="Keywords" content="{#$keywords#}" />
+    <meta name="Description" content="{#$description#}" />
+    <title>{#$page_title#}</title>
+    <link rel="icon" href="" type="image/x-ico">
+    <link rel="stylesheet" href="{#$domain#}css/a.css" />
+    <link href="{#$domain#}css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{#$domain#}css/animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+    <script type="text/javascript" src="{#$domain#}js/wow.min.js" ></script>
+    <script src="{#$domain#}js/jquery.min.js"></script>
+    <script src="{#$domain#}js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+  </head>
+  <body>
+    <header>
+    <!--====================导航====================-->
+    {# include file="headsub.htm"#}
+    <!--====================banner====================-->
+    
+      <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img class="img-responsive" src="{#$domain#}img/banner/banner_01.png" alt="汤先生"/></div>
+        <div class="swiper-slide"><img class="img-responsive" src="{#$domain#}img/banner/banner_02.png" alt="汤先生"/></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev swiper-button-white"></div>
+      <div class="swiper-button-next swiper-button-white"></div>
+    </div>
+    <!--====================banner-end====================-->
+    </header>
+    
+    <section style="overflow: hidden;">
+      <div class="container">
+        <div class="title wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+          <h3>品牌·{#$column_array.2.name#}</h3>
+          <h5>soup master</h5>
+        </div>
+        <div class="row brand wow slideInRight" data-wow-duration="1s" data-wow-delay="0s">
+          <div class="col-xs-12 col-sm-12 col-md-7">
+            <p>
+              {#$about_content#}
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-5">
+            <img src="{#$domain#}img/about_us.png" class="img-responsive center-block" alt="" />
+          </div>
+        </div>
+      </div>
+      
+      <div class="brand-point">
+        <div class="container-fluid">
+          <div class="row wow slideInRight" data-wow-duration="1s" data-wow-delay="0s">
+            <div class="col-xs-12 col-sm-4 col-md-4 pont-content">
+              <div class="col-xs-6 col-sm-5 col-md-7"><img src="{#$domain#}img/brand_spec_01.png" class="img-responsive center-block"/></div>
+              <div class="col-xs-6 col-sm-7 col-md-5">
+                <p>优质产地天然汤材</p>
+                <p>只选用无硫熏辅料</p>
+              </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-4 col-md-4 pont-content">
+              <div class="col-xs-6 col-sm-5 col-md-7"><img src="{#$domain#}img/brand_spec_02.png" class="img-responsive center-block"/></div>
+              <div class="col-xs-6 col-sm-7 col-md-5">
+                <p>不添加味精 鸡精</p>
+                <p>保持汤品原汁原味</p>
+              </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-4 col-md-4 pont-content">
+              <div class="col-xs-6 col-sm-5 col-md-7"><img src="{#$domain#}img/brand_spec_03.png" class="img-responsive center-block"/></div>
+              <div class="col-xs-6 col-sm-7 col-md-5">
+                <p>60min熬煮，释放肉质营养</p>
+                <p>60min蒸炖，锁住饱和鲜味</p>
+              </div>
+            </div>
+          </div>          
+        </div>
+      </div>
+      
+      <div class="container">
+        <div class="title wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+          <h3>新闻中心</h3>
+          <h5>news center</h5>
+        </div>
+        
+        <div class="news row">
+          <div class="news-new col-xs-12 col-sm-6 col-md-6 wow slideInLeft" data-wow-duration="1s" data-wow-delay="0s">
+            <h4>{#$column_array.3.name#}</h4>
+            <a href="{#$domain#}news/page_1.html"><div class="news-more">更多&raquo;</div></a>
+            <hr />
+            {# section loop=$list_news name=row max=5#}
+            <div class="new-content row">
+              <div class="col-xs-9 col-sm-9 col-md-10">
+                <p><a href="{#$domain|cat:$list_news[row].catalog#}/{#$list_news[row].id#}.html" target="_blank">{#$list_news[row].title#}</a></p>
+                <div>
+                  {# $list_news[row].context|replace:"&nbsp;":""|strip_tags|truncate:50:"...":true #}
+                </div>
+              </div>
+              <div class="new-time col-xs-3 col-sm-3 col-md-2">
+                <div>{# $list_news[row].date|mb_substr:8:10:'GBK'#}</div>
+                <div>{# $list_news[row].date|truncate:7:"":true#}</div>
+              </div>          
+            </div>
+            <hr />
+            {# /section#}
+          </div>
+
+          <div class="news-success col-xs-12 col-sm-5 col-md-5 col-sm-offset-1 col-md-offset-1 wow slideInRight" data-wow-duration="1s" data-wow-delay="0s">
+            <h4>{#$column_array.4.name#}</h4>
+            <a href="{#$domain#}cases/page_1.html"><div class="news-more">更多&raquo;</div></a>
+            <hr />
+            
+            <img src="{#$domain#}img/news.jpg"class="img-responsive center-block"/>
+            {# section loop=$list_case name=row max=3#}
+            <div class="success-content row">
+              <div class="col-xs-9 col-sm-9 col-md-10">
+                <p><a href="{#$domain|cat:$list_case[row].catalog#}/{#$list_case[row].id#}.html" target="_blank">{#$list_case[row].title#}</a></p>
+                <div>
+                  {# $list_case[row].context|replace:"&nbsp;":""|strip_tags|truncate:70:"...":true #}
+                </div>
+              </div>
+              <div class="new-time col-xs-3 col-sm-3 col-md-2">
+                <div>{# $list_case[row].date|mb_substr:8:10:'GBK'#}</div>
+                <div>{# $list_case[row].date|truncate:7:"":true#}</div>
+              </div>          
+            </div>
+            <hr />
+            {# /section#}
+          </div>
+        </div>        
+      </div>
+      
+      <div class="products-show">
+        <div class="container">
+          <div class="box wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+            <ul> 
+              {# section loop=$list_product name=row max=3#}
+              <li><img src="{#$domain#}img/product/{#$list_product[row].img_url#}" class="img-responsive center-block"/></li>
+              {# /section#}      
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container join">
+        <div class="title wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+          <h3>成功的机会永远留给主动咨询的人！</h3>
+          <h5>汤先生·专注健康·专注品牌</h5>
+        </div>
+        <div class="row wow slideInRight" data-wow-duration="1s" data-wow-delay="0s">
+          <form role="form" class="col-xs-10 col-sm-10 col-md-8 col-xs-offset-1 col-sm-offset-1 col-md-offset-2" enctype="multipart/form-data" action="http://localhost/tangxiansheng/manage/message_add.php" method="post" name="theForm" onsubmit="return validate()">
+            <div class="form-group">
+              <label for="name">姓名<span>/name</span>：</label>
+              <input type="text" id="name" name="name" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="phone">电话<span>/phone</span>：</label>
+              <input type="text" id="phone" name="phone" class="form-control"/>
+            </div>
+            <div class="form-group">
+              <label for="message">留言<span>/message</span>：</label>
+              <textarea id="message" name="message" class="form-control" rows="3"></textarea>
+            </div>
+            <div class="form-group col-xs-8 col-sm-4 col-md-4 col-xs-offset-2 col-sm-offset-4 col-md-offset-4 btn">
+              <input type="submit" id="submit" name="submit" value="立即提交" />
+              <input type="hidden" name="act"  value="add" />
+              <input type="hidden" name="item"  value="" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+  {# include file="footsub.htm"#}
+  </body>
+  <script type="text/javascript" src="{#$domain#}js/a.js" ></script>
+  <script type="text/javascript" src="{#$domain#}js/judge.js" ></script>
+  <script>
+      new WOW().init();
+  </script>
+  <script type="text/javascript">
+    //导航栏样式选中
+    $(function() {
+      $('#nav ul ul li a').eq(0).addClass("on");
+    });
+
+    
+    /*获取当前的品牌名称*/
+    $(function() {
+      $.ajax({
+       type: "get",
+       url: "templates/validate.php?brand_name",
+       dataType: "text",
+       jsonp: "jsoncallback",
+       async: false,
+       success: function (data) {
+         $("input[name=item]").val(data);
+       },
+       error: function (data) {
+         alert("留言板无法获取品牌名");
+       }
+     });
+    });
+    
+    /* 输入验证 */
+    function validate()
+    { 
+
+      var validator = new judge();
+
+      validator.required('name', '请输入您的姓名！');
+      validator.required('phone', '请输入您的手机号码！');
+      //validator.required('message', '请输入留言内容！');
+
+      return validator.passed() && validator.phone() && submitOnce();
+    }
+  </script>
+</html>

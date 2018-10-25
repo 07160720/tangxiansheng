@@ -1,0 +1,30 @@
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="col-md-4"><img src="{#$domain#}img/code.jpg" class="center-block"/></div>
+          <div class="col-md-8">
+            <p>友情链接</p>
+            <ul>
+              {# section loop=$friendlink name=row#}
+              <li><a href="{#$friendlink[row].link#}" target="_blank">{#$friendlink[row].name#}</a></li>
+              {# /section#}
+            </ul>
+            <ul class="footer-nav">
+              {# section loop=$column name=row #}
+              <li><a href="{#$domain|cat:$column[row].link#}">{#$column[row].name#}</a></li>
+              {# /section #}
+              <li><a href="{#$domain#}sitemap.html" target="_blank">网站地图</a></li>
+            </ul>
+            <p><span class="glyphicon glyphicon-map-marker"></span>{#$cfg_address#}</p>
+            <p>©2018 {#$cfg_company#}版权所有   <a href="http://www.miitbeian.gov.cn/" class="footer-ip" target="_blank">{#$cfg_icp#}</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="footer-phone">
+    <li><a href="tel:{#$consult_phone#}" rel="nofollow">电话咨询</a></li>
+    <li><a href="sms:{#$consult_phone#}" rel="nofollow">短信咨询</a></li>
+    <li><a href="{#$domain#}contact.html" rel="nofollow">在线咨询</a></li>
+  </div>
