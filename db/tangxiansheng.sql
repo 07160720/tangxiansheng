@@ -197,6 +197,18 @@ INSERT INTO `friendlylink` (`id`, `name`, `link`) VALUES
 (12, '汤先生官网', 'http://'),
 (13, '汤先生加盟费', 'http://');
 
+--
+-- 表的结构 `joins`
+--
+
+CREATE TABLE IF NOT EXISTS `joins` (
+  `id` int(9) NOT NULL AUTO_INCREMENT,
+  `name` varchar(120) NOT NULL,
+  `desc` varchar(200) NOT NULL,
+  `img_url` varchar(120) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=33 ;
+
 -- --------------------------------------------------------
 
 --
